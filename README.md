@@ -13,7 +13,7 @@ NFData needs to be:
 * **Extensible**
 * **Composable**
 
-There are a few more important goals:
+There are a few other important goals:
 
 * Support existing NFT specifications
 * Start with something minimal, with optional extensions for marketplaces and apps that understand specialized NFTs
