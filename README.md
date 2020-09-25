@@ -27,6 +27,7 @@ There are a few other important goals:
 ## Prior Art
 
 * Many schemas that may be suitable for NFTs have already been defined and are available at [schema.org](https://schema.org/docs/schemas.html) including [images](https://schema.org/ImageObject), [video](https://schema.org/VideoObject), [audio](https://schema.org/AudioObject), and so on.
+* [OpenSea: Adding Metadata](https://docs.opensea.io/docs/2-adding-metadata)
 * [ERC-721 Metadata Standards and IPFS](https://medium.com/blockchain-manchester/erc-721-metadata-standards-and-ipfs-94b01fea2a89)
 
 
