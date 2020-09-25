@@ -70,7 +70,7 @@ Many property rights use-cases require the ability to provably associate specifi
 
 The proliferation of fake tokens on existing blockchain marketplaces such as OpenSea and Uniswap is evidence that we should bake the necessary metadata tools to fight abuse into future NFT specifications and protocols.
 
-Each IP-backed token must supply a hash of the represented IP baked into the on-chain token metadata. The hash must be an immutable root record. Of course, IP tends to change over time, with corrections, updates, and added features. Each future revision should be represented as an on-chain claim with a reference to the root token. Revisions should be added to an append-only log that keeps a complete history of IP versions, all addressable on-chain. Each revision must be signed by somebody authorized to add a revision.
+Each IP-backed token should supply a hash of the represented IP baked into the on-chain token metadata. If included, the hash must be an immutable root record. Of course, IP tends to change over time, with corrections, updates, and added features. Each future revision should be represented as an on-chain claim with a reference to the root token. Revisions should be added to an append-only log that keeps a complete history of IP versions, all addressable on-chain. Each revision must be signed by somebody authorized to add a revision.
 
 Each content hash should be a URI that dereferences to the represented data, for verification, similar to how IPFS addressing works (in fact, we can start by supporting IPFS out of the gate).
 
