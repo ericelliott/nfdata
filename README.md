@@ -23,22 +23,6 @@ There are a few other important goals:
 * Build on prior art instead of reinventing the wheel
 * In casees where we need to diverge from prior art to bake in consistency, ensure mappings to commonly implemented standards to ease interoperability
 
-## Store a Content Hash On-Chain
-
-Many property rights use-cases require the ability to provably associate specific, unique data with an NFT, on-chain. That association can then be used as evidence for intellectual property claims, contested listings, and on-chain governance which can provide a first layer of defense against IP infringement in order to protect asset rights, fight fraud, and fight spam - all on-chain, indpendent of geographical borders.
-
-The proliferation of fake tokens on existing blockchain marketplaces such as OpenSea and Uniswap is evidence that we should bake the necessary metadata tools to fight abuse into future NFT specifications and protocols.
-
-Each IP-backed token must supply a hash of the represented IP baked into the on-chain token metadata. The hash must be an immutable root record. Of course, IP tends to change over time, with corrections, updates, and added features. Each future revision should be represented as an on-chain claim with a reference to the root token. Revisions should be added to an append-only log that keeps a complete history of IP versions, all addressable on-chain. Each revision must be signed by somebody authorized to add a revision.
-
-Each content hash should be a URI that dereferences to the represented data, for verification, similar to how IPFS addressing works (in fact, we can start by supporting IPFS out of the gate).
-
-For tokens representing IP (art, video, audio, written word), it should be trivial to detect duplicate hashes and flag them as potentially fraudulent copies. Clients could do that and alert the user that the data they're trying to tokenize has already been tokenized.
-
-Having this data on-chain means that we can handle many IP rights violations using on-chain governance, enforce and defend smart contracts with royalty splits, and so on.
-
-Instead of engaging in the heavyweight physical world court system, we can report a fraudulent NFT, present our own on-chain NFT evidence, and let on-chain governance take over.
-
 
 ## Prior Art
 
@@ -75,3 +59,22 @@ ERC-721 tokens get associated with their metadata on-chain using a [tokenURI fie
 That's a good start, but there's a lot more that we'll need in our applications and marketplaces. How do we handle audio, or video, and how do we verify authenticity of an NFT? How can users make claims of IP violations and get scams and spam removed from marketplace listings?
 
 Metadata needs to be discoverable, interoperable, and composable.
+
+
+## The Metadata
+
+### Content Hash
+
+Many property rights use-cases require the ability to provably associate specific, unique content with an NFT, on-chain. That association can then be used as evidence for intellectual property claims, contested listings, and on-chain governance which can provide a first layer of defense against IP infringement in order to protect asset rights, fight fraud, and fight spam - all on-chain, indpendent of geographical borders.
+
+The proliferation of fake tokens on existing blockchain marketplaces such as OpenSea and Uniswap is evidence that we should bake the necessary metadata tools to fight abuse into future NFT specifications and protocols.
+
+Each IP-backed token must supply a hash of the represented IP baked into the on-chain token metadata. The hash must be an immutable root record. Of course, IP tends to change over time, with corrections, updates, and added features. Each future revision should be represented as an on-chain claim with a reference to the root token. Revisions should be added to an append-only log that keeps a complete history of IP versions, all addressable on-chain. Each revision must be signed by somebody authorized to add a revision.
+
+Each content hash should be a URI that dereferences to the represented data, for verification, similar to how IPFS addressing works (in fact, we can start by supporting IPFS out of the gate).
+
+For tokens representing IP (art, video, audio, written word), it should be trivial to detect duplicate hashes and flag them as potentially fraudulent copies. Clients could do that and alert the user that the data they're trying to tokenize has already been tokenized.
+
+Having this data on-chain means that we can handle many IP rights violations using on-chain governance, enforce and defend smart contracts with royalty splits, and so on.
+
+Instead of engaging in the heavyweight physical world court system, we can report a fraudulent NFT, present our own on-chain NFT evidence, and let on-chain governance take over.
