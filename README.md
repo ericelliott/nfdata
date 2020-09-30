@@ -64,7 +64,35 @@ Metadata needs to be discoverable, interoperable, and composable.
 
 ## The Metadata
 
-### Content Hash
+### Metadata Presence
+
+Metadata is OPTIONAL.
+
+### Metadata Format
+
+Use schema.org and JSON-LD to define the metadata structure and contents.
+
+Examples on how to format data using schema.org and JSON-LD are available here:
+
+* https://developers.google.com/search/docs/data-types/book#structured-data-type-definitions
+* List of all the available schemas: https://schema.org/docs/schemas.html
+
+### Metadata Storage
+
+Both on-chain an off off-chain storage methods are accepted.
+
+#### For Metadata That is Stored Off-Chain:
+
+* A reference to the metadata file MUST be stored on-chain.
+* The metadata file MAY be named using the [multihash](https://github.com/multiformats/multihash) of the file contents.
+* 🔢 `{metadata: "https:\/\/s3.amazonaws.com\/your-bucket\/your-folder\/{file-hash}.json" ...`
+* 💡 Metadata translations can be managed using the "workTranslation": attribute inside the metadata file.
+
+#### For metadata that is stored on-chain
+
+No other requirements.
+
+#### Content Hash
 
 Many property rights use-cases require the ability to provably associate specific, unique content with an NFT, on-chain. That association can then be used as evidence for intellectual property claims, contested listings, and on-chain governance which can provide a first layer of defense against IP infringement in order to protect asset rights, fight fraud, and fight spam - all on-chain, indpendent of geographical borders.
 
@@ -79,3 +107,7 @@ For tokens representing IP (art, video, audio, written word), it should be trivi
 Having this data on-chain means that we can handle many IP rights violations using on-chain governance, enforce and defend smart contracts with royalty splits, and so on.
 
 Instead of engaging in the heavyweight physical world court system, we can report a fraudulent NFT, present our own on-chain NFT evidence, and let on-chain governance take over.
+
+### Examples
+
+...
