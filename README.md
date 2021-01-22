@@ -1,6 +1,6 @@
 # NFData
 
-NFData is a metadata proposal for NFT interoperability. Every US dollar is worth $1. You can use any dollar to pay for anything that costs $1. That property is called "fungibility". But most things are non-fungible, like cars, art, shoes houses, or equity. To represent those things, the blockchain community created Non-Fungible Tokens (NFTs). NFT standards exist to represent everything that isn't fungible currency.
+NFData is a metadata proposal for NFT interoperability. Every US dollar is worth $1. You can use any dollar to pay for anything that costs $1. That property is called "fungibility". But most things are non-fungible, like cars, art, shoes houses, or equity. To represent those things, the blockchain community created Non-Fungible Tokens (NFTs). NFT standards exist to represent everything that isn't fungible value.
 
 And because it can represent everything, the metadata we use to describe those things must be very flexible. That has already led to splintering and NFT protocols which can't talk to each other. This document exists to push towards a future where NFT marketplaces can easily get all the data they need to present a listing by looking at on-chain references to find the relevant data storage associated with the token.
 
