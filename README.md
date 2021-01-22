@@ -85,6 +85,7 @@ Both on-chain an off off-chain storage methods are accepted.
 
 * A reference to the metadata file MUST be stored on-chain.
 * The metadata file MAY be named using the [multihash](https://github.com/multiformats/multihash) of the file contents.
+* Decentralized Storage: Metadata and associated files MAY be stored on IPFS, addressable by the multihash.
 * 🔢 `{metadata: "https:\/\/s3.amazonaws.com\/your-bucket\/your-folder\/{file-hash}.json" ...`
 * 💡 Metadata translations can be managed using the "workTranslation": attribute inside the metadata file.
 
@@ -98,7 +99,7 @@ Many property rights use-cases require the ability to provably associate specifi
 
 The proliferation of fake tokens on existing blockchain marketplaces such as OpenSea and Uniswap is evidence that we should bake the necessary metadata tools to fight abuse into future NFT specifications and protocols.
 
-Each IP-backed token should supply a hash of the represented IP baked into the on-chain token metadata. If included, the hash must be an immutable root record. Of course, IP tends to change over time, with corrections, updates, and added features. Each future revision should be represented as an on-chain claim with a reference to the root token. Revisions should be added to an append-only log that keeps a complete history of IP versions, all addressable on-chain. Each revision must be signed by somebody authorized to add a revision.
+Each IP-backed token should supply a hash of the represented IP baked into the on-chain token metadata. If included, the hash must be an immutable root record. Of course, IP tends to change over time, with corrections, updates, and added features. Each future revision SHOULD be represented as an on-chain claim with a reference to the root token. Revisions SHOULD be added to an append-only log that keeps a complete history of IP versions, all addressable on-chain. Each revision MUST be signed by the revision issuer.
 
 Each content hash should be a URI that dereferences to the represented data, for verification, similar to how IPFS addressing works (in fact, we can start by supporting IPFS out of the gate).
 
